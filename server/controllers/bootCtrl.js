@@ -1,27 +1,28 @@
 const boots = require('../bootsArray')
 
 const collectedBoots = [];
-const collectedId = 0;
+let collectedId = 0;
 
 
 module.exports = {
 
     getAvailibleBoots: (req, res) => {
-        console.log(boots)
+        // console.log(boots)
         res.status(200).send(boots);
     },
 
-    getCollectedBoots: (req, res) => {
-        res.status(200).send(collectedBoots);
-    },
+    // getCollectedBoots: (req, res) => {
+    //     res.status(200).send(collectedBoots);
+    // },
 
     postBootToCollection: (req, res) => {
-        const { boot } = req.body;
-
-        boot.id = collectedId;
+        const { newBoot } = req.body;
+        console.log(newBoot)
+        // console.log()
+        newBoot.id = collectedId;
         collectedId++;
 
-        collectedBoots.push(boot);
+        collectedBoots.push(newBoot);
         res.status(200).send(collectedBoots);
     },
 

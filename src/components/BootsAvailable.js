@@ -10,30 +10,24 @@ class BootsAvailable extends Component {
     constructor() {
         super();
         this.state = {
-            availableBootArray: [],
+            // availableBootArray: [],
             collectedBoots: []
         }
-        //binding
+        this.clickOnBoot = this.clickOnBoot.bind(this)
     }
 
 
-    // componentDidMount() {
-    //     axios.get('/api/available-boots')
-    //         .then(res => {
-    //             console.log(res)
-    //             this.setState({ availableBootArray: res.boots })
-    //             // console.log(availableBootArray)
-    //         })
-    //         .catch(error => console.log(error))
-    // }
 
-    // clickOnBoot(id) {
-    //     axios.post('/api/collected-boots', { id: id })
-    //         .then(res => {
-    //             this.props.addBoot(id)
-    //         })
-    //         .catch(error => console.log(error))
-    // }
+    clickOnBoot(value) {
+        // const { bootsAvailable } = this.props
+
+        let newBoot = value
+
+        // console.log(newBoot)
+        this.props.addBoot(newBoot)
+
+    }
+
 
     render() {
         // console.log(this.state.availableBootArray)

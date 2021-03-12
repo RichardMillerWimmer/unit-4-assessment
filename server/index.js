@@ -12,7 +12,7 @@ app.use(express.json());
 // contorller enpoints
 app.get('/api/available-boots', bootCtrl.getAvailibleBoots);
 
-app.get('/api/collected-boots', bootCtrl.getCollectedBoots);
+// app.get('/api/collected-boots', bootCtrl.getCollectedBoots);
 app.post('/api/collected-boots', bootCtrl.postBootToCollection);
 app.put('/api/collected-boots/:id', bootCtrl.addCleanCondition);
 app.put('/api/collected-boots/:id', bootCtrl.addWear);

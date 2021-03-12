@@ -3,9 +3,12 @@ import React from "react";
 
 function BoxesCollectedBoots(props) {
     return (
-        <div>
-            <p className='collectedBoots'>Collected Boot Box</p>
+
+        <div >
+            <img src={props.boot.img} />
+            <p>{props.boot.model}</p>
         </div>
+
     )
 };
 
