@@ -7,7 +7,7 @@ class BootCollection extends Component {
     constructor() {
         super();
         this.state = {
-            collectedBoots: this.props.collectedBoots
+            collectedBoots: []
         }
     }
 
@@ -15,7 +15,7 @@ class BootCollection extends Component {
 
     render() {
 
-        mappedBoots = this.state.collectedBoots.map((elem, i) => (
+        const mappedBoots = this.state.collectedBoots.map((elem, i) => (
             <BoxesCollectedBoots
                 key={i}
                 boots={elem}

@@ -1,4 +1,4 @@
-const boots = [
+module.exports = [
     {
         id: 0,
         model: 8111,
@@ -189,3 +189,4 @@ const boots = [
         cc: null
     }
 ]
+

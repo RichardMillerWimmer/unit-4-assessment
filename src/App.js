@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import boots from '../server/bootsArray'
+
 
 import BootCollection from './components/BootCollection'
 import BootsAvailable from './components/BootsAvailable'
@@ -13,17 +13,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      bootsAvailable: boots,
+      bootsAvailable: [],
       collectedBoots: []
     }
     //binding
   }
 
-  addBoot(id) {
-    // console.log(id)
-    collectedBoots.push(id);
-    // console.log(collectedBoots)
+  componentDidMount() {
+    axios.get('/api/available-boots')
+      .then(res => {
+        // console.log(res)
+        this.setState({ bootsAvailable: res.data })
+        // console.log(this.state.bootsAvailable)
+      })
+      .catch(error => console.log(error))
   }
+
+
+
+  // addBoot(id) {
+  //   // console.log(id)
+  //   this.setState({ collectedBoots: collectedBoots.push(id) });
+  //   // console.log(this.state.collectedBoots)
+  // }
 
 
 

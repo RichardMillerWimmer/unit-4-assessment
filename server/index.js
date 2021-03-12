@@ -20,4 +20,4 @@ app.delete('/api/collected-boots/:id', bootCtrl.deleteBoots);
 
 
 
-app.listen(port, () => console.log('server is running on 5051'));
+app.listen(port, () => console.log(`server is running on ${port}`));

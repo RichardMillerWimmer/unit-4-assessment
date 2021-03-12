@@ -7,6 +7,7 @@ const collectedId = 0;
 module.exports = {
 
     getAvailibleBoots: (req, res) => {
+        console.log(boots)
         res.status(200).send(boots);
     },
 

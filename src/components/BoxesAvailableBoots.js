@@ -5,8 +5,8 @@ function BoxesAvailableBoots(props) {
 
     return (
         <div className='bootBox' onClick={props.clickOnBoot} >
-            <ima src={props.boot.img} alt={props.style} />
-            <p>{props.boot.style}</p>
+            <img src={props.boot.img} />
+            <p>{props.boot.model}</p>
         </div>
     )
 };
