@@ -2,9 +2,11 @@ import React from "react";
 
 
 function BoxesAvailableBoots(props) {
+
     return (
-        <div>
-            <p className='header'>Available Boot Box</p>
+        <div className='bootBox' onClick={props.clickOnBoot} >
+            <ima src={props.boot.img} alt={props.style} />
+            <p>{props.boot.style}</p>
         </div>
     )
 };

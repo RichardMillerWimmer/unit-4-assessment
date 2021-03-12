@@ -1,4 +1,4 @@
-import boots from '../../src/bootsArray'
+const boots = require('../bootsArray')
 
 const collectedBoots = [];
 const collectedId = 0;
@@ -33,7 +33,7 @@ module.exports = {
     },
 
     addWear: (req, res) => {
-        const { id } = req.params,
+        const { id } = req.params
 
         const wearingBoots = collectedBoots.find(elem => elem.id === +id);
         wearingBoots.wear += 1;
