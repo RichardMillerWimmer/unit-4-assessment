@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
-
+/* Cormorant Garmond', serif */
 
 * {
   box-sizing: border-box;
+  font-family: 'Tahoma', sans-serif;
+}
+body {
+  margin: 0;
+  background-color: rgb(250, 250, 240);
 }
 
 h1 {
@@ -15,13 +20,11 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  font-family: 'Cormorant Garmond', serif;
 }
 
 p {
   font-size: 1.2rem;
-  font-family: 'Cormorant Garmond', serif;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 
@@ -61,6 +64,9 @@ p {
 }
 .bootBox:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 60px 0 rgba(0,0,0,0.19);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
 }
 
 .bootBox img {
@@ -68,54 +74,64 @@ p {
   max-height: 100%;
 }
 
-.modelNumber {
+.bootInfo {
   position: absolute;
-  z-index: 1;
+}
+.bootInfo p {
+  font-size: 1rem;
   margin: 10px;
+  opacity: 0%;
+  transition-duration: .5s;
+}
+.modelNumber {
+  margin: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.bootBox:hover p {
+  opacity: 100%;
 }
 
 
 
+
+
+
 /* Collection Display  */
+.bootCheck {
+  font-size: 1rem;
+  text-align: center;
+  background-color: rgba(50, 54, 116, .3);
+  padding: 10px;
+  border-radius: 4px;
+}
+
 .bootBoxCollection {
   margin: 15px;
-  height: 250px;
+  height: auto;
   width: 250px;
   position: relative;
   box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+.bootBoxCollection .modelNumber {
+  position: absolute; 
+  z-index: 1;
+  margin: 10px;
 }
 
 .bootBoxCollection img{
   max-width: 100%;
   max-height: 100%;
-  
-}
-
-/* .btnContaniner {
-  position: absolute;
-} */
-
-/* .collectionCntl {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  z-index: 1;
-} */
-
-/* .removeBtnContainer {
-  position: absolute;
-  z-index: 1;
-  margin: 10px;
-} */
+  /* object-fit: fill; */
+} 
 
 .deleteBtn {
   position: absolute;
   top: 10px;
   right: 10px;
   border: none;
-  background-color: rgb(148, 68, 68);
+  background-color: rgb(24, 24, 24);
   color: rgb(255, 250, 245);
-  padding: 7px 10px;
+  padding: 8px 11px;
   border-radius: 4px;
   transition-duration: .5s;
   opacity: 30%;
@@ -123,16 +139,63 @@ p {
 }
 .deleteBtn:hover {
   opacity: 100;
+  background-color: rgb(148, 68, 68)
 }
 
-.incBtn1 {
+.wearsContainer {
   position: absolute;
-  top: 60px;
-  left: 10px
-}
-
-.incBtn2 {
-  position: absolute;
-  top: 90px;
+  top: 57px;
   left: 10px;
+}
+.incBtn1 {
+  display: inline-block;
+  border: none;
+  background-color: rgb(50, 54, 116);
+  color: rgb(255, 250, 245);
+  opacity: 30%;
+  padding: 5px 8.5px;
+  border-radius: 4px;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+.incBtn1:hover{
+  opacity: 100%;
+}
+.wearsContainer p {
+display: inline-block;
+padding-left: 5px;
+margin: 0;
+}
+
+.cleaningsContainer {
+  position: absolute;
+  top: 97px;
+  left: 10px;
+}
+.incBtn2 {
+  display: inline;
+  opacity: 30%;
+  border: none;
+  background-color: rgb(50, 54, 116);
+  color: rgb(255, 250, 245);
+  opacity: 30%;
+  padding: 5px 8.5px;
+  border-radius: 4px;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+.incBtn2:hover {
+  opacity: 100%;
+}
+.cleaningsContainer p {
+  display: inline;
+  padding-left: 5px;
+  margin: 0;
+}
+
+
+/* Filter */
+
+.filter {
+  text-align: center;
 }

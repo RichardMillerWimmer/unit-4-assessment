@@ -57,7 +57,7 @@ class App extends Component {
   render() {
     // console.log(this.state.collectedBoots)
     return (
-      <div className="App" >
+      <body className="App" >
         <Header />
         <section className='flexContainer'>
           <div className='bootAvailable'>
@@ -67,7 +67,7 @@ class App extends Component {
             <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} />
           </div>
         </section>
-      </div>
+      </body>
     );
   }
 }

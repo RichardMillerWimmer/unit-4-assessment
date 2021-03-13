@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 
-
+import Filter from './Filter'
 import BoxesAvailableBoots from './BoxesAvailableBoots'
 
 // import './App.css';
@@ -38,6 +38,7 @@ class BootsAvailable extends Component {
         return (
             <div className="App" >
                 <h2>Available Boots</h2>
+                <Filter />
                 <div className='bootBoxContainer' >
                     {mappedBoots}
                 </div>

@@ -19,6 +19,13 @@ class BootCollection extends Component {
 
 
     render() {
+
+        let bootCheck = this.props.collectedBoots
+        let noBoots = () => {
+            if (bootCheck.length === 0) {
+                return <p className='bootCheck'>add boots to <br></br>your collection</p>
+            }
+        }
         // console.log(this.props.collectedBoots)
         const mappedBoots = this.props.collectedBoots.map((elem, i) => (
             <BoxesCollectedBoots
@@ -33,6 +40,7 @@ class BootCollection extends Component {
             <div className="App" >
                 <h2>Collected Boots</h2>
                 <div className='bootBoxContainer'>
+                    {(noBoots())}
                     {mappedBoots}
                 </div>
             </div>
