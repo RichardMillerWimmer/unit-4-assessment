@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 
 import BoxesAvailableBoots from './BoxesAvailableBoots'
@@ -20,12 +20,9 @@ class BootsAvailable extends Component {
 
     clickOnBoot(value) {
         // const { bootsAvailable } = this.props
-
         let newBoot = value
-
         // console.log(newBoot)
         this.props.addBoot(newBoot)
-
     }
 
 
@@ -41,7 +38,9 @@ class BootsAvailable extends Component {
         return (
             <div className="App" >
                 <h2>Available Boots</h2>
-                {mappedBoots}
+                <div className='bootBoxContainer' >
+                    {mappedBoots}
+                </div>
             </div>
         );
     }

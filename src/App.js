@@ -18,6 +18,7 @@ class App extends Component {
     }
 
     this.addBoot = this.addBoot.bind(this)
+    this.deleteBoot = this.deleteBoot.bind(this)
 
   }
 
@@ -28,25 +29,29 @@ class App extends Component {
         this.setState({ bootsAvailable: res.data })
         // console.log(this.state.bootsAvailable)
       })
-    //   .catch(error => console.log(error))
-    // axios.get('/api/collected-boots')
-    //   .then(res => {
-    //     this.setState({ collectedBoots: res.data })
-    //   })
-    //   .catch(error => console.log(error))
   }
 
   addBoot(newBoot) {
     // console.log(newBoot)
     axios.post('/api/collected-boots', { newBoot })
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.setState({ collectedBoots: res.data })
         // console.log(this.state.collectedBoots)
       })
       .catch(error => console.log(error))
   }
 
+
+  deleteBoot(removeBoot) {
+    console.log(removeBoot)
+    axios.delete('/api/collected-boots', { removeBoot })
+      .then(res => {
+        console.log(res)
+        this.setState({ collectedBoots: res.data })
+      })
+      .catch(error => console.log(error))
+  }
 
 
   render() {
@@ -55,7 +60,7 @@ class App extends Component {
       <div className="App" >
         <Header />
         <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} />
-        <BootCollection collectedBoots={this.state.collectedBoots} />
+        <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} />
       </div>
     );
   }

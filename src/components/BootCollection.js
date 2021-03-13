@@ -7,28 +7,24 @@ class BootCollection extends Component {
     constructor() {
         super();
         this.state = {
-            collectedBoots: [
-                // {
-                //     id: 0,
-                //     model: 8111,
-                //     style: "Iron Ranger",
-                //     leather: "Amber Harness",
-                //     img: '#',
-                //     wears: null,
-                //     cc: null
-                // }
-            ]
+            // collectedBoots: []
         }
     }
 
+    clickOnDelete(value) {
+        let removeBoot = value
+        console.log(removeBoot)
+        this.props.deleteBoot(removeBoot)
+    }
 
 
     render() {
-        console.log(this.props.collectedBoots)
+        // console.log(this.props.collectedBoots)
         const mappedBoots = this.props.collectedBoots.map((elem, i) => (
             <BoxesCollectedBoots
                 key={i}
                 boot={elem}
+                clickOnDelete={this.clickOnDelete}
             />
         ))
         // console.log(mappedBoots)
@@ -36,7 +32,9 @@ class BootCollection extends Component {
         return (
             <div className="App" >
                 <h2>Collected Boots</h2>
-                {mappedBoots}
+                <div className='bootBoxContainer'>
+                    {mappedBoots}
+                </div>
             </div>
         );
     }
