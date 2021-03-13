@@ -59,8 +59,14 @@ class App extends Component {
     return (
       <div className="App" >
         <Header />
-        <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} />
-        <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} />
+        <section className='flexContainer'>
+          <div className='bootAvailable'>
+            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} />
+          </div>
+          <div className='bootCollection'>
+            <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} />
+          </div>
+        </section>
       </div>
     );
   }

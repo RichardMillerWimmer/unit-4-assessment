@@ -4,18 +4,18 @@ module.exports = [
         model: 8111,
         style: "Iron Ranger",
         leather: "Amber Harness",
-        img: 'https://embed.widencdn.net/img/redwing/fcwacxemrq/300x300px/RW08085C_MUL_N1_0416?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        img: 'https://embed.widencdn.net/img/redwing/31wc1pt1tv/300x300px/RW08119C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
+        wears: 0,
+        cc: 0
     },
     {
         id: 1,
         model: 8085,
         style: "Iron Ranger",
         leather: "Copper R&T",
-        img: 'https://embed.widencdn.net/img/redwing/31wc1pt1tv/300x300px/RW08119C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        img: 'https://embed.widencdn.net/img/redwing/fcwacxemrq/300x300px/RW08085C_MUL_N1_0416?position=S&crop=no&color=EDE8DD',
+        wears: 0,
+        cc: 0
     },
     {
         id: 2,
@@ -23,8 +23,8 @@ module.exports = [
         style: "Iron Ranger",
         leather: "Oxblood Mesa",
         img: 'https://embed.widencdn.net/img/redwing/vhngyoup5h/300x300px/RW08111C_MUL_N1_0418?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 3,
@@ -32,8 +32,8 @@ module.exports = [
         style: "Iron Ranger",
         leather: "Charcol R&T",
         img: 'https://embed.widencdn.net/img/redwing/mkkwryjsup/300x300px/RW08086C_MUL_N1_0416?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 4,
@@ -41,8 +41,8 @@ module.exports = [
         style: "Iron Ranger",
         leather: "Hawthorne Muleskinner",
         img: 'https://embed.widencdn.net/img/redwing/gyirsiodoo/300x300px/RW08083C_MUL_N1_0416?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 5,
@@ -50,8 +50,8 @@ module.exports = [
         style: "Iron Ranger",
         leather: "Black Harness",
         img: 'https://embed.widencdn.net/img/redwing/twxidjo1mc/300x300px/RW08084C_MUL_N1_0418?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 6,
@@ -59,8 +59,8 @@ module.exports = [
         style: "Classic Moc",
         leather: "Black Prairie",
         img: 'https://embed.widencdn.net/img/redwing/x3m14jyqpk/300x300px/RW08849C_MUL_N1_0619?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 7,
@@ -68,8 +68,8 @@ module.exports = [
         style: "Classic Moc",
         leather: "Oxblood Mesa",
         img: 'https://embed.widencdn.net/img/redwing/ywvnqllkia/300x300px/RW08856C_MUL_N1_0619?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 8,
@@ -77,8 +77,8 @@ module.exports = [
         style: "Classic Moc",
         leather: "Navy Portage",
         img: 'https://embed.widencdn.net/img/redwing/jb5yvv8v86/300x300px/RW08859C_MUL_N1_0618?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 9,
@@ -86,8 +86,8 @@ module.exports = [
         style: "Classic Moc",
         leather: "Copper R&T",
         img: 'https://embed.widencdn.net/img/redwing/g8gfilhja5/300x300px/RW01907C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 10,
@@ -95,8 +95,8 @@ module.exports = [
         style: "Classic Moc",
         leather: "Oro Legacy",
         img: 'https://embed.widencdn.net/img/redwing/s24jzuhfeb/300x300px/RW00875C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 11,
@@ -104,8 +104,8 @@ module.exports = [
         style: "Classic Moc",
         leather: "Concrete R&T",
         img: 'https://embed.widencdn.net/img/redwing/juywvhzev6/300x300px/RW08883C_MUL_N1_0616?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 12,
@@ -113,8 +113,8 @@ module.exports = [
         style: "Classic Moc",
         leather: "Charcoal R&T",
         img: 'https://embed.widencdn.net/img/redwing/wkb6wwub4k/300x300px/RW08890C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 13,
@@ -122,8 +122,8 @@ module.exports = [
         style: "Classic Moc",
         leather: "Briar Oil-Slick",
         img: 'https://embed.widencdn.net/img/redwing/wh3suuwrxs/300x300px/RW08138C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 14,
@@ -131,8 +131,8 @@ module.exports = [
         style: "Blacksmith",
         leather: "Black Prairie",
         img: 'https://embed.widencdn.net/img/redwing/scgnvtowyi/300x300px/RW03345C_MUL_N1_0618?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 15,
@@ -140,8 +140,8 @@ module.exports = [
         style: "Blacksmith",
         leather: "Copper R&T",
         img: 'https://embed.widencdn.net/img/redwing/cxagjopx6b/300x300px/RW03343C_MUL_N1_1015?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 16,
@@ -149,8 +149,8 @@ module.exports = [
         style: "Blacksmith",
         leather: "Birar Oil-Slick",
         img: 'https://embed.widencdn.net/img/redwing/ymfggtyxfv/300x300px/RW03340C_MUL_N1_1015?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 17,
@@ -158,8 +158,8 @@ module.exports = [
         style: "Blacksmith",
         leather: "Charcoal R&T",
         img: 'https://embed.widencdn.net/img/redwing/ymfggtyxfv/300x300px/RW03340C_MUL_N1_1015?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 18,
@@ -167,8 +167,8 @@ module.exports = [
         style: "Merchant",
         leather: "Amber Harness",
         img: 'https://embed.widencdn.net/img/redwing/cyqxjwakfp/300x300px/RW08064C_MUL_N1_0618?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 19,
@@ -176,8 +176,8 @@ module.exports = [
         style: "Roughneck",
         leather: "Briar Oil-Slick",
         img: 'https://embed.widencdn.net/img/redwing/lwincgdw91/300x300px/RW08146C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     },
     {
         id: 20,
@@ -185,8 +185,8 @@ module.exports = [
         style: "Roughneck",
         leather: "Copper R&T",
         img: 'https://embed.widencdn.net/img/redwing/7sjixhmdz9/300x300px/RW02942C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
-        wears: null,
-        cc: null
+        wears: 0,
+        cc: 0
     }
 ]
 

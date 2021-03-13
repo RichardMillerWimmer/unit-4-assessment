@@ -9,8 +9,8 @@ function BoxesAvailableBoots(props) {
             // props.clickOnBoot(event.target.value)
             // console.log(event)
         }}>
-            <p>{props.boot.model}</p>
-            <img src={props.boot.img} />
+            <h3 className='modelNumber'>{props.boot.model}</h3>
+            <img src={props.boot.img} alt={props.boot.model} />
         </div>
     )
 };

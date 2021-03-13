@@ -13,12 +13,36 @@ h2 {
   text-align: center;
 }
 
-p {
+h3 {
   font-size: 1.5rem;
   font-family: 'Cormorant Garmond', serif;
-  font-weight: 500;
 }
 
+p {
+  font-size: 1.2rem;
+  font-family: 'Cormorant Garmond', serif;
+  font-weight: 600;
+}
+
+
+
+/* Side by Side flex */
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+.bootAvailable {
+  width: 70vw;
+  border: 1px black solid;
+}
+.bootCollection {
+  width: 30vw;
+  border: 1px black solid;
+}
+
+
+
+/* Availible Boot Display */
 .bootBoxContainer {
   display: flex;
   flex-direction: row;
@@ -27,9 +51,88 @@ p {
 }
 
 .bootBox {
-  margin: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  position: relative;
+  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+  transition-duration: .5s;
+  cursor: pointer;
+}
+.bootBox:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 60px 0 rgba(0,0,0,0.19);
 }
 
 .bootBox img {
-  width: 200px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modelNumber {
+  position: absolute;
+  z-index: 1;
+  margin: 10px;
+}
+
+
+
+/* Collection Display  */
+.bootBoxCollection {
+  margin: 15px;
+  height: 250px;
+  width: 250px;
+  position: relative;
+  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+
+.bootBoxCollection img{
+  max-width: 100%;
+  max-height: 100%;
+  
+}
+
+/* .btnContaniner {
+  position: absolute;
+} */
+
+/* .collectionCntl {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  z-index: 1;
+} */
+
+/* .removeBtnContainer {
+  position: absolute;
+  z-index: 1;
+  margin: 10px;
+} */
+
+.deleteBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: rgb(148, 68, 68);
+  color: rgb(255, 250, 245);
+  padding: 7px 10px;
+  border-radius: 4px;
+  transition-duration: .5s;
+  opacity: 30%;
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  opacity: 100;
+}
+
+.incBtn1 {
+  position: absolute;
+  top: 60px;
+  left: 10px
+}
+
+.incBtn2 {
+  position: absolute;
+  top: 90px;
+  left: 10px;
 }
