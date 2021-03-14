@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
+// import BoxesCollected2 from './BoxesCollected2'
 
 import BoxesCollectedBoots from './BoxesCollectedBoots'
-// import './App.css';
+
+
 
 class BootCollection extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             // collectedBoots: []
         }
+
+        // this.deleteBoot = this.deleteBoot.bind(this)
+        this.clickOnDelete = this.clickOnDelete.bind(this)
     }
+
+
 
     clickOnDelete(value) {
         let removeBoot = value
@@ -17,15 +26,28 @@ class BootCollection extends Component {
         this.props.deleteBoot(removeBoot)
     }
 
+    // deleteBoot(removeBoot) {
+    //     console.log(removeBoot)
+    //     axios.delete('/api/collected-boots', { removeBoot })
+    //         .then(res => {
+    //             console.log(res)
+    //             this.setState({ collectedBoots: res.data })
+    //         })
+    //         .catch(error => console.log(error))
+    // }
 
     render() {
+        // console.log(this.state.collectedBoots)
+
 
         let bootCheck = this.props.collectedBoots
         let noBoots = () => {
             if (bootCheck.length === 0) {
-                return <p className='bootCheck'>add boots to <br></br>your collection</p>
+                return <p className='bootCheck'>add boots to<br></br>your collection</p>
             }
         }
+
+
         // console.log(this.props.collectedBoots)
         const mappedBoots = this.props.collectedBoots.map((elem, i) => (
             <BoxesCollectedBoots
@@ -37,13 +59,13 @@ class BootCollection extends Component {
         // console.log(mappedBoots)
 
         return (
-            <div className="App" >
+            <aside className="App" >
                 <h2>Collected Boots</h2>
-                <div className='bootBoxContainer'>
+                <div className='bootBoxContainerCollection'>
                     {(noBoots())}
                     {mappedBoots}
                 </div>
-            </div>
+            </aside>
         );
     }
 }

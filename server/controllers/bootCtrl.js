@@ -12,6 +12,7 @@ module.exports = {
     },
 
     // getCollectedBoots: (req, res) => {
+    //     console.log(collectedBoots)
     //     res.status(200).send(collectedBoots);
     // },
 

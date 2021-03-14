@@ -8,6 +8,7 @@ import Header from './components/Header';
 
 
 import './App.css';
+// import BoxesCollected2 from './components/BoxesCollected2';
 
 class App extends Component {
   constructor() {
@@ -45,7 +46,7 @@ class App extends Component {
 
   deleteBoot(removeBoot) {
     console.log(removeBoot)
-    axios.delete('/api/collected-boots', { removeBoot })
+    axios.delete('/api/collected-boots/:id', { removeBoot })
       .then(res => {
         console.log(res)
         this.setState({ collectedBoots: res.data })
@@ -55,9 +56,11 @@ class App extends Component {
 
 
   render() {
-    // console.log(this.state.collectedBoots)
+    console.log(this.state.collectedBoots)
+
+
     return (
-      <body className="App" >
+      <main className="App" >
         <Header />
         <section className='flexContainer'>
           <div className='bootAvailable'>
@@ -65,9 +68,13 @@ class App extends Component {
           </div>
           <div className='bootCollection'>
             <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} />
+            {/* <BootCollection /> */}
           </div>
         </section>
-      </body>
+        <footer>
+          <h4>Boot Collection by: Richard Miller Wimmer</h4>
+        </footer>
+      </main>
     );
   }
 }
