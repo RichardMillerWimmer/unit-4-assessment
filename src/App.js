@@ -19,6 +19,8 @@ class App extends Component {
     }
 
     this.addBoot = this.addBoot.bind(this)
+    this.addWear = this.addWear.bind(this)
+    this.addCC = this.addCC.bind(this)
     this.deleteBoot = this.deleteBoot.bind(this)
 
   }
@@ -43,10 +45,28 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
+  addWear(bootId) {
+    console.log(bootId)
+    axios.put(`/api/collected-boots/:${bootId}`)
+      .then(res => {
+        console.log(res)
+        this.setState({ collectedBoots: res.data })
+      })
+      .catch(error => console.log(error))
+  }
+
+  addCC(bootId) {
+    axios.put(`/api/collected-boots/:${bootId}`)
+      .then(res => {
+        console.log(res)
+        this.setState({ collectedBoots: res.data })
+      })
+      .catch(error => console.log(error))
+  }
 
   deleteBoot(removeBoot) {
     console.log(removeBoot)
-    axios.delete('/api/collected-boots/:id', { removeBoot })
+    axios.delete(`/api/collected-boots/${removeBoot}`)
       .then(res => {
         console.log(res)
         this.setState({ collectedBoots: res.data })
@@ -56,25 +76,25 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.collectedBoots)
+    // console.log(this.state.collectedBoots)
 
 
     return (
-      <main className="App" >
+      <body className="App" >
         <Header />
-        <section className='flexContainer'>
-          <div className='bootAvailable'>
+        <main className='flexContainer'>
+          <section className='bootAvailable'>
             <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} />
-          </div>
-          <div className='bootCollection'>
-            <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} />
+          </section>
+          <section className='bootCollection'>
+            <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} addWear={this.addWear} addCC={this.addCC} />
             {/* <BootCollection /> */}
-          </div>
-        </section>
+          </section>
+        </main>
         <footer>
-          <h4>Boot Collection by: Richard Miller Wimmer</h4>
+          <p>Boot Collection Tracker by: Richard Miller Wimmer</p>
         </footer>
-      </main>
+      </body>
     );
   }
 }

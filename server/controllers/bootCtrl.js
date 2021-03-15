@@ -28,24 +28,27 @@ module.exports = {
     },
 
     addCleanCondition: (req, res) => {
-        const { id } = req.params;
+        const { id } = req.params,
+            { cc } = req.body;
 
         const cleaningBoots = collectedBoots.find(elem => elem.id === +id);
-        cleaningBoots.cc += 1;
+        cleaningBoots.cc = cc + 1;
         res.status(200).send(collectedBoots);
     },
 
     addWear: (req, res) => {
-        const { id } = req.params
+        const { id } = req.params,
+            { wears } = req.body;
+        console.log(id)
 
         const wearingBoots = collectedBoots.find(elem => elem.id === +id);
-        wearingBoots.wear += 1;
+        wearingBoots.wears = wears + 1;
         res.status(200).send(collectedBoots);
     },
 
     deleteBoots: (req, res) => {
         const { id } = req.params;
-
+        console.log(id)
         const bootIndex = collectedBoots.findIndex(elem => elem.id === +id);
         collectedBoots.splice(bootIndex, 1);
         res.status(200).send(collectedBoots);

@@ -14,27 +14,36 @@ class BootCollection extends Component {
             // collectedBoots: []
         }
 
-        // this.deleteBoot = this.deleteBoot.bind(this)
+        this.clickOnWears = this.clickOnWears.bind(this)
+        this.clickOnCC = this.clickOnCC.bind(this)
         this.clickOnDelete = this.clickOnDelete.bind(this)
     }
 
 
 
     clickOnDelete(value) {
+        // console.log(value)
         let removeBoot = value
-        console.log(removeBoot)
+        // console.log(removeBoot)
         this.props.deleteBoot(removeBoot)
     }
 
-    // deleteBoot(removeBoot) {
-    //     console.log(removeBoot)
-    //     axios.delete('/api/collected-boots', { removeBoot })
-    //         .then(res => {
-    //             console.log(res)
-    //             this.setState({ collectedBoots: res.data })
-    //         })
-    //         .catch(error => console.log(error))
-    // }
+    clickOnWears(value) {
+        console.log(value)
+        let bootId = value
+        console.log(bootId)
+        this.props.addWear(bootId)
+    }
+
+    clickOnCC(value) {
+        console.log(value)
+        let bootId = value
+        console.log(bootId)
+        this.props.addCC(bootId)
+    }
+
+
+
 
     render() {
         // console.log(this.state.collectedBoots)
@@ -54,6 +63,8 @@ class BootCollection extends Component {
                 key={i}
                 boot={elem}
                 clickOnDelete={this.clickOnDelete}
+                clickOnWears={this.clickOnWears}
+                clickOnCC={this.clickOnCC}
             />
         ))
         // console.log(mappedBoots)
