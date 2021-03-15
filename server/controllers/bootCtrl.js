@@ -7,12 +7,20 @@ let collectedId = 0;
 module.exports = {
 
     getAvailibleBoots: (req, res) => {
-        // console.log(boots)
-        const { model } = req.query
+        console.log(req.query)
+        const { model, style, leather } = req.query
         if (model) {
-            let filteredBoots = boots.filter(boots.model === model)
-            res.staus(200).send(filteredBoots)
-        } else {
+            let filteredBoots = boots.filter(boots => boots.model === +model)
+            console.log(filteredBoots)
+            res.status(200).send(filteredBoots)
+        } if (style) {
+            let filteredBoots = boots.filter(boots => boots.style === style)
+            res.status(200).send(filteredBoots)
+        } if (leather) {
+            let filteredBoots = boots.filter(boots => boots.leather === leather)
+            res.status(200).send(filteredBoots)
+        }
+        else {
             res.status(200).send(boots);
         }
     },

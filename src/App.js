@@ -18,7 +18,7 @@ class App extends Component {
       collectedBoots: []
     }
 
-    this.filterBoots = this.filterBoots.bind(this)
+    this.filterBootModel = this.filterBootModel.bind(this)
     this.resetFilter = this.resetFilter.bind(this)
     this.addBoot = this.addBoot.bind(this)
     this.addWear = this.addWear.bind(this)
@@ -36,7 +36,7 @@ class App extends Component {
       })
   }
 
-  filterBoots(modelNumberSearch) {
+  filterBootModel(modelNumberSearch) {
     console.log(modelNumberSearch)
     axios.get(`/api/available-boots?model=${modelNumberSearch}`)
       .then(res => {
@@ -112,7 +112,7 @@ class App extends Component {
         <Header />
         <main className='flexContainer'>
           <section className='bootAvailable'>
-            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} filterBoots={this.filterBoots} resetFilter={this.resetFilter} />
+            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} filterBootModel={this.filterBootModel} resetFilter={this.resetFilter} />
           </section>
           <section className='bootCollection'>
             <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} addWear={this.addWear} addCC={this.addCC} />
