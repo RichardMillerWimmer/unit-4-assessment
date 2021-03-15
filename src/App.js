@@ -34,6 +34,17 @@ class App extends Component {
       })
   }
 
+  // filterBoots(req, res) {
+  //   console.log(req.query)
+
+  //   if (req.query.model) {
+  //     const filteredBootList = boots.filter(elem => elem.model >= +req.query.model)
+  //     // console.log(productsByPrice)
+  //     return res.status(200).send(filteredBootList)
+  //   }
+  //   res.status(200).send(boots)
+  // };
+
   addBoot(newBoot) {
     // console.log(newBoot)
     axios.post('/api/collected-boots', { newBoot })

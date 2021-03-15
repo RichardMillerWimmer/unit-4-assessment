@@ -157,7 +157,7 @@ module.exports = [
         model: 3341,
         style: "Blacksmith",
         leather: "Charcoal R&T",
-        img: 'https://embed.widencdn.net/img/redwing/ymfggtyxfv/300x300px/RW03340C_MUL_N1_1015?position=S&crop=no&color=EDE8DD',
+        img: 'https://embed.widencdn.net/img/redwing/yzrozn6tft/300x300px/RW03341C_MUL_N1_1015?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
     },
