@@ -15,7 +15,7 @@ class Filter extends Component {
     }
 
     handleInput = (value) => {
-        this.setState({ modelNumberSearch: value })
+        this.setState({ modelNumberSearch: +value })
         console.log(this.state.modelNumberSearch)
     }
 
@@ -23,6 +23,11 @@ class Filter extends Component {
         console.log(this.state.modelNumberSearch)
         this.props.filterBoots(this.state.modelNumberSearch)
         this.handleToggle()
+    }
+
+    handleReset = () => {
+        this.props.resetFilter()
+        this.setState({ modelNumberSearch: null })
     }
 
 
@@ -43,7 +48,8 @@ class Filter extends Component {
                     )
                     : (
                         <div>
-                            <button onClick={this.handleToggle}>Open Search Options</button>
+                            <button onClick={this.handleToggle}>open search options</button>
+                            <button onClick={this.handleReset}>reset filter</button>
                         </div>
                     )}
             </section >

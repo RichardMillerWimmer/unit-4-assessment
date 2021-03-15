@@ -8,7 +8,13 @@ module.exports = {
 
     getAvailibleBoots: (req, res) => {
         // console.log(boots)
-        res.status(200).send(boots);
+        const { model } = req.query
+        if (model) {
+            let filteredBoots = boots.filter(boots.model === model)
+            res.staus(200).send(filteredBoots)
+        } else {
+            res.status(200).send(boots);
+        }
     },
 
     // getCollectedBoots: (req, res) => {
@@ -18,7 +24,7 @@ module.exports = {
 
     postBootToCollection: (req, res) => {
         const { newBoot } = req.body;
-        console.log(newBoot)
+        // console.log(newBoot)
         // console.log()
         newBoot.id = collectedId;
         collectedId++;
@@ -40,7 +46,7 @@ module.exports = {
     addWear: (req, res) => {
         const { id } = req.params;
         // { wears } = req.body;
-        console.log(id)
+        // console.log(id)
 
         const wearingBoots = collectedBoots.find(elem => elem.id === +id);
         wearingBoots.wears = wearingBoots.wears + 1;

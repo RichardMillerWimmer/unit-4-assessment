@@ -5,7 +5,7 @@ const bootCtrl = require('./controllers/bootCtrl');
 const app = express();
 const port = 5050;
 
-console.log(bootCtrl)
+// console.log(bootCtrl)
 
 app.use(express.json());
 

@@ -19,6 +19,7 @@ class App extends Component {
     }
 
     this.filterBoots = this.filterBoots.bind(this)
+    this.resetFilter = this.resetFilter.bind(this)
     this.addBoot = this.addBoot.bind(this)
     this.addWear = this.addWear.bind(this)
     this.addCC = this.addCC.bind(this)
@@ -35,16 +36,31 @@ class App extends Component {
       })
   }
 
-  filterBoots(req, res) {
-    console.log(req.query)
+  filterBoots(modelNumberSearch) {
+    console.log(modelNumberSearch)
+    axios.get(`/api/available-boots?model=${modelNumberSearch}`)
+      .then(res => {
+        console.log(res)
+        this.setState({ bootsAvailable: res.data })
+      })
+      .catch(error => console.log(error))
+  }
 
-    if (req.query.model) {
-      const filteredBootList = this.state.bootsAvailable.filter(elem => elem.model >= +req.query.model)
-      this.setState({ bootsAvailable: filteredBootList })
-      return res.status(200).send(this.state.bootsAvailable)
-    }
-    res.status(200).send(this.state.bootsAvailable)
-  };
+  // filterBoots(modelNumberSearch) {
+  //   console.log(modelNumberSearch)
+
+  //   let modelSearch = this.state.bootsAvailable.filter(elem => elem.model === modelNumberSearch)
+  //   this.setState({ bootsAvailable: modelSearch })
+  // }
+
+  resetFilter() {
+    axios.get('/api/available-boots')
+      .then(res => {
+        // console.log(res)
+        this.setState({ bootsAvailable: res.data })
+        // console.log(this.state.bootsAvailable)
+      })
+  }
 
   addBoot(newBoot) {
     // console.log(newBoot)
@@ -96,7 +112,7 @@ class App extends Component {
         <Header />
         <main className='flexContainer'>
           <section className='bootAvailable'>
-            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} filterBoots={this.filterBoots} />
+            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} filterBoots={this.filterBoots} resetFilter={this.resetFilter} />
           </section>
           <section className='bootCollection'>
             <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} addWear={this.addWear} addCC={this.addCC} />

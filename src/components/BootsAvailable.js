@@ -42,7 +42,8 @@ class BootsAvailable extends Component {
             <div className="App" >
                 <h2>Available Boots</h2>
                 <Filter
-                    filterBoots={this.props.filterBoots} />
+                    filterBoots={this.props.filterBoots}
+                    resetFilter={this.props.resetFilter} />
                 <div className='bootBoxContainer' >
                     {mappedBoots}
                 </div>
