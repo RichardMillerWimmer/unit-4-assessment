@@ -69,20 +69,21 @@ class Filter extends Component {
                             <h4>Search For Boots</h4>
 
                             <input value={this.state.modelNumberSearch} onChange={event => this.handleInputModel(event.target.value)} type='text' placeholder='search by model number'></input>
-                            <button onClick={this.handleFilterModel} >search model</button>
+                            <button className='searchBtn' onClick={this.handleFilterModel} >search model</button>
 
                             <input value={this.state.styleSearch} onChange={event => this.handleInputStyle(event.target.value)} type='text' placeholder='search by style'></input>
-                            <button onClick={this.handleFilterStyle} >search style</button>
+                            <button className='searchBtn' onClick={this.handleFilterStyle} >search style</button>
 
                             <input value={this.state.leatherSearch} onChange={event => this.handleInputLeather(event.target.value)} type='text' placeholder='search by leather'></input>
-                            <button onClick={this.handleFilterLeather} >search leather</button>
+                            <button className='searchBtn' onClick={this.handleFilterLeather} >search leather</button>
 
                         </div>
                     )
                     : (
                         <div>
-                            <button onClick={this.handleToggle}>open search options</button>
-                            <button onClick={this.handleReset}>reset filter</button>
+                            <button className='filterBtn' onClick={this.handleToggle}>open search </button>
+                            <br></br>
+                            <button className='filterBtn' onClick={this.handleReset}>reset filter</button>
                         </div>
                     )}
             </section >

@@ -130,7 +130,7 @@ class App extends Component {
   render() {
 
     return (
-      <section className="App" >
+      <section >
         <Header />
         <main className='flexContainer'>
           <section className='bootAvailable'>

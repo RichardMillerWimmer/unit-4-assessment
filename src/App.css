@@ -12,6 +12,8 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 2.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h2 {
@@ -27,15 +29,22 @@ p {
   font-weight: 400;
 }
 
-/* header {
-  height: 120px;
-  margin: 0;
-  padding: 0;
-  background-image: url("https://thumbnails.creationswap.com/gallery/7/3/7339_5.jpg");
-  background-position: bottom;
+header {
+  height: 150px;
+  background-image: url("https://image.shutterstock.com/image-photo/retro-stylized-old-tools-on-600w-348612920.jpg");
+  background-position: top;
   background-size: cover;
+}
+.header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 575px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: rgba(214, 214, 238, 0.5);
+}
 
-} */
 
 
 /* Side by Side flex */
@@ -130,6 +139,7 @@ p {
 }
 .themeDark .themeBtn {
   background-color: rgb(250, 250, 240);
+  border-color: rgb(255, 250, 245);
 }
 .themeDark .bootCheck {
   background-color: rgb(250, 250, 240);
@@ -152,9 +162,12 @@ p {
   right: 12px;
   top: -48px;
   padding: 5px;
-  border: none;
-  border-radius: 4px;
   background-color: rgba(50, 54, 116, 0.5);
+  width: 50px;
+  height: 27px;
+  border-top: black;
+  border-left: black;
+
 }
 
 .bootBoxCollection {
@@ -259,13 +272,32 @@ margin: 0;
   margin-right: auto;
   background-color: rgba(50, 54, 116, .5);
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
-.filter h4 {
-  display: inline-block;
-  padding-right: 10px;
+/* .filter h4 {
+  padding-top: 0;
+} */
+
+.searchBtn {
+  width: 100px;
+  height: 22px;
+  margin-left: 5px;
+  border-top: black;
+  border-left: black;
+  background-color: rgb(255, 250, 240);
 }
 
+.filterBtn {
+  width: 100px;
+  height: 22px;
+  margin-left: 5px;
+  border-top: black;
+  border-left: black;
+  background-color: rgb(255, 250, 240);
+}
+
+/* Footer */
 footer {
   text-align: center;
   font-weight: 400;

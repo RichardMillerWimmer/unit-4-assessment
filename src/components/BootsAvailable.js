@@ -39,7 +39,7 @@ class BootsAvailable extends Component {
             />
         ))
         return (
-            <div className="App" >
+            <div >
                 <h2>Available Boots</h2>
                 <Filter
                     filterBootModel={this.props.filterBootModel}
