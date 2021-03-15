@@ -67,12 +67,16 @@ class Filter extends Component {
                     ? (
                         <div>
                             <h4>Search For Boots</h4>
+
                             <input value={this.state.modelNumberSearch} onChange={event => this.handleInputModel(event.target.value)} type='text' placeholder='search by model number'></input>
                             <button onClick={this.handleFilterModel} >search model</button>
+
                             <input value={this.state.styleSearch} onChange={event => this.handleInputStyle(event.target.value)} type='text' placeholder='search by style'></input>
                             <button onClick={this.handleFilterStyle} >search style</button>
+
                             <input value={this.state.leatherSearch} onChange={event => this.handleInputLeather(event.target.value)} type='text' placeholder='search by leather'></input>
-                            <button onClick={this.handleFilterStyle} >search leather</button>
+                            <button onClick={this.handleFilterLeather} >search leather</button>
+
                         </div>
                     )
                     : (

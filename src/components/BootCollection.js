@@ -11,12 +11,13 @@ class BootCollection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // collectedBoots: []
+            themeDark: false
         }
 
         this.clickOnWears = this.clickOnWears.bind(this)
         this.clickOnCC = this.clickOnCC.bind(this)
         this.clickOnDelete = this.clickOnDelete.bind(this)
+        this.handleThemeToggle = this.handleThemeToggle.bind(this)
     }
 
 
@@ -42,6 +43,10 @@ class BootCollection extends Component {
         this.props.addCC(bootId)
     }
 
+    handleThemeToggle() {
+        this.setState({ themeDark: !this.state.themeDark })
+    }
+
 
 
 
@@ -65,14 +70,16 @@ class BootCollection extends Component {
                 clickOnDelete={this.clickOnDelete}
                 clickOnWears={this.clickOnWears}
                 clickOnCC={this.clickOnCC}
+                themeDark={this.state.themeDark}
             />
         ))
         // console.log(mappedBoots)
 
         return (
-            <aside className="App" >
-                <h2>Collected Boots</h2>
+            <aside className={this.state.themeDark ? 'themeDark' : ''} >
+                < h2 > Collected Boots</ h2>
                 <div className='bootBoxContainerCollection'>
+                    <button className='themeBtn' onClick={this.handleThemeToggle}>theme</button>
                     {(noBoots())}
                     {mappedBoots}
                 </div>

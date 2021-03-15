@@ -19,6 +19,8 @@ class App extends Component {
     }
 
     this.filterBootModel = this.filterBootModel.bind(this)
+    this.filterBootStyle = this.filterBootStyle.bind(this)
+    this.filterBootLeather = this.filterBootLeather.bind(this)
     this.resetFilter = this.resetFilter.bind(this)
     this.addBoot = this.addBoot.bind(this)
     this.addWear = this.addWear.bind(this)
@@ -39,6 +41,27 @@ class App extends Component {
   filterBootModel(modelNumberSearch) {
     console.log(modelNumberSearch)
     axios.get(`/api/available-boots?model=${modelNumberSearch}`)
+      .then(res => {
+        console.log(res)
+        this.setState({ bootsAvailable: res.data })
+      })
+      .catch(error => console.log(error))
+  }
+
+  filterBootStyle(styleSearch) {
+    console.log(styleSearch)
+    let styleSearchEncoded = encodeURIComponent(styleSearch)
+    axios.get(`/api/available-boots?style=${styleSearchEncoded}`)
+      .then(res => {
+        console.log(res)
+        this.setState({ bootsAvailable: res.data })
+      })
+      .catch(error => console.log(error))
+  }
+
+  filterBootLeather(leatherSearch) {
+    console.log(leatherSearch)
+    axios.get(`/api/available-boots?leather=${leatherSearch}`)
       .then(res => {
         console.log(res)
         this.setState({ bootsAvailable: res.data })
@@ -74,29 +97,30 @@ class App extends Component {
   }
 
   addWear(bootId) {
-    console.log(bootId)
+    // console.log(bootId)
     axios.put(`/api/collected-boots/wears/${bootId}`)
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.setState({ collectedBoots: res.data })
       })
       .catch(error => console.log(error))
   }
 
   addCC(bootId) {
+    // console.log(bootId)
     axios.put(`/api/collected-boots/cc/${bootId}`)
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.setState({ collectedBoots: res.data })
       })
       .catch(error => console.log(error))
   }
 
   deleteBoot(removeBoot) {
-    console.log(removeBoot)
+    // console.log(removeBoot)
     axios.delete(`/api/collected-boots/${removeBoot}`)
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.setState({ collectedBoots: res.data })
       })
       .catch(error => console.log(error))
@@ -104,19 +128,16 @@ class App extends Component {
 
 
   render() {
-    // console.log(this.state.collectedBoots)
-
 
     return (
       <section className="App" >
         <Header />
         <main className='flexContainer'>
           <section className='bootAvailable'>
-            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} filterBootModel={this.filterBootModel} resetFilter={this.resetFilter} />
+            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} filterBootModel={this.filterBootModel} filterBootStyle={this.filterBootStyle} filterBootLeather={this.filterBootLeather} resetFilter={this.resetFilter} />
           </section>
           <section className='bootCollection'>
             <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} addWear={this.addWear} addCC={this.addCC} />
-            {/* <BootCollection /> */}
           </section>
         </main>
         <footer>

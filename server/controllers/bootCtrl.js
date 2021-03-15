@@ -8,16 +8,21 @@ module.exports = {
 
     getAvailibleBoots: (req, res) => {
         console.log(req.query)
+        let filteredBoots = []
         const { model, style, leather } = req.query
+        // let encoded = encodeURIComponent(leather)
+
         if (model) {
             let filteredBoots = boots.filter(boots => boots.model === +model)
+            // console.log(filteredBoots)
+            res.status(200).send(filteredBoots)
+        } else if (style) {
+            let filteredBoots = boots.filter(boots => boots.style.toLocaleLowerCase() === style.toLocaleLowerCase())
+            // console.log(filteredBoots)
+            res.status(200).send(filteredBoots)
+        } else if (leather) {
+            let filteredBoots = boots.filter(boots => boots.leather.toLocaleLowerCase() === leather.toLocaleLowerCase())
             console.log(filteredBoots)
-            res.status(200).send(filteredBoots)
-        } if (style) {
-            let filteredBoots = boots.filter(boots => boots.style === style)
-            res.status(200).send(filteredBoots)
-        } if (leather) {
-            let filteredBoots = boots.filter(boots => boots.leather === leather)
             res.status(200).send(filteredBoots)
         }
         else {

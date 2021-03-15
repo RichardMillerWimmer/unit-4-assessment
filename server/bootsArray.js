@@ -12,7 +12,7 @@ module.exports = [
         id: 1,
         model: 8085,
         style: "Iron Ranger",
-        leather: "Copper R&T",
+        leather: "Copper R and T",
         img: 'https://embed.widencdn.net/img/redwing/fcwacxemrq/300x300px/RW08085C_MUL_N1_0416?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
@@ -30,7 +30,7 @@ module.exports = [
         id: 3,
         model: 8086,
         style: "Iron Ranger",
-        leather: "Charcol R&T",
+        leather: "Charcol R and T",
         img: 'https://embed.widencdn.net/img/redwing/mkkwryjsup/300x300px/RW08086C_MUL_N1_0416?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
@@ -84,7 +84,7 @@ module.exports = [
         id: 9,
         model: 1907,
         style: "Classic Moc",
-        leather: "Copper R&T",
+        leather: "Copper R and T",
         img: 'https://embed.widencdn.net/img/redwing/g8gfilhja5/300x300px/RW01907C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
@@ -102,7 +102,7 @@ module.exports = [
         id: 11,
         model: 8883,
         style: "Classic Moc",
-        leather: "Concrete R&T",
+        leather: "Concrete R and T",
         img: 'https://embed.widencdn.net/img/redwing/juywvhzev6/300x300px/RW08883C_MUL_N1_0616?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
@@ -111,7 +111,7 @@ module.exports = [
         id: 12,
         model: 8890,
         style: "Classic Moc",
-        leather: "Charcoal R&T",
+        leather: "Charcoal R and T",
         img: 'https://embed.widencdn.net/img/redwing/wkb6wwub4k/300x300px/RW08890C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
@@ -138,7 +138,7 @@ module.exports = [
         id: 15,
         model: 3343,
         style: "Blacksmith",
-        leather: "Copper R&T",
+        leather: "Copper R and T",
         img: 'https://embed.widencdn.net/img/redwing/cxagjopx6b/300x300px/RW03343C_MUL_N1_1015?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
@@ -156,7 +156,7 @@ module.exports = [
         id: 17,
         model: 3341,
         style: "Blacksmith",
-        leather: "Charcoal R&T",
+        leather: "Charcoal R and T",
         img: 'https://embed.widencdn.net/img/redwing/yzrozn6tft/300x300px/RW03341C_MUL_N1_1015?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
@@ -183,7 +183,7 @@ module.exports = [
         id: 20,
         model: 2942,
         style: "Roughneck",
-        leather: "Copper R&T",
+        leather: "Copper R and T",
         img: 'https://embed.widencdn.net/img/redwing/7sjixhmdz9/300x300px/RW02942C_MUL_N1_1115?position=S&crop=no&color=EDE8DD',
         wears: 0,
         cc: 0
