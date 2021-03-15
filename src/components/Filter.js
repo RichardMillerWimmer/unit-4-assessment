@@ -5,7 +5,8 @@ class Filter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isSearching: false
+            isSearching: false,
+            modelNumberSearch: null
         };
     }
 
@@ -13,6 +14,16 @@ class Filter extends Component {
         this.setState({ isSearching: !this.state.isSearching })
     }
 
+    handleInput = (value) => {
+        this.setState({ modelNumberSearch: value })
+        console.log(this.state.modelNumberSearch)
+    }
+
+    handleFilter = () => {
+        console.log(this.state.modelNumberSearch)
+        this.props.filterBoots(this.state.modelNumberSearch)
+        this.handleToggle()
+    }
 
 
     render() {
@@ -22,13 +33,13 @@ class Filter extends Component {
 
                 {this.state.isSearching
                     ? (
-                        <form>
+                        <div>
                             <h4>Search For Boots</h4>
-                            <input type='text' placeholder='search by model number'></input>
-                            <input type='text' placeholder='search by style'></input>
-                            <input type='text' placeholder='search by leather'></input>
-                            <button onClick={this.handleToggle} >search</button>
-                        </form>
+                            <input value={this.state.modelNumberSearch} onChange={event => this.handleInput(event.target.value)} type='text' placeholder='search by model number'></input>
+                            {/* <input type='text' placeholder='search by style'></input>
+                            <input type='text' placeholder='search by leather'></input> */}
+                            <button onClick={this.handleFilter} >search</button>
+                        </div>
                     )
                     : (
                         <div>

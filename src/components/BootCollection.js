@@ -29,16 +29,16 @@ class BootCollection extends Component {
     }
 
     clickOnWears(value) {
-        console.log(value)
+        // console.log(value)
         let bootId = value
-        console.log(bootId)
+        // console.log(bootId)
         this.props.addWear(bootId)
     }
 
     clickOnCC(value) {
-        console.log(value)
+        // console.log(value)
         let bootId = value
-        console.log(bootId)
+        // console.log(bootId)
         this.props.addCC(bootId)
     }
 

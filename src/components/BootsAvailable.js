@@ -11,7 +11,7 @@ class BootsAvailable extends Component {
         super();
         this.state = {
             // availableBootArray: [],
-            collectedBoots: []
+            // collectedBoots: []
         }
         this.clickOnBoot = this.clickOnBoot.bind(this)
     }
@@ -26,6 +26,9 @@ class BootsAvailable extends Component {
     }
 
 
+
+
+
     render() {
         // console.log(this.state.availableBootArray)
         const mappedBoots = this.props.bootsAvailable.map((elem, i) => (
@@ -38,7 +41,8 @@ class BootsAvailable extends Component {
         return (
             <div className="App" >
                 <h2>Available Boots</h2>
-                <Filter />
+                <Filter
+                    filterBoots={this.props.filterBoots} />
                 <div className='bootBoxContainer' >
                     {mappedBoots}
                 </div>

@@ -18,6 +18,7 @@ class App extends Component {
       collectedBoots: []
     }
 
+    this.filterBoots = this.filterBoots.bind(this)
     this.addBoot = this.addBoot.bind(this)
     this.addWear = this.addWear.bind(this)
     this.addCC = this.addCC.bind(this)
@@ -34,16 +35,16 @@ class App extends Component {
       })
   }
 
-  // filterBoots(req, res) {
-  //   console.log(req.query)
+  filterBoots(req, res) {
+    console.log(req.query)
 
-  //   if (req.query.model) {
-  //     const filteredBootList = boots.filter(elem => elem.model >= +req.query.model)
-  //     // console.log(productsByPrice)
-  //     return res.status(200).send(filteredBootList)
-  //   }
-  //   res.status(200).send(boots)
-  // };
+    if (req.query.model) {
+      const filteredBootList = this.state.bootsAvailable.filter(elem => elem.model >= +req.query.model)
+      this.setState({ bootsAvailable: filteredBootList })
+      return res.status(200).send(this.state.bootsAvailable)
+    }
+    res.status(200).send(this.state.bootsAvailable)
+  };
 
   addBoot(newBoot) {
     // console.log(newBoot)
@@ -58,7 +59,7 @@ class App extends Component {
 
   addWear(bootId) {
     console.log(bootId)
-    axios.put(`/api/collected-boots/:${bootId}`)
+    axios.put(`/api/collected-boots/wears/${bootId}`)
       .then(res => {
         console.log(res)
         this.setState({ collectedBoots: res.data })
@@ -67,7 +68,7 @@ class App extends Component {
   }
 
   addCC(bootId) {
-    axios.put(`/api/collected-boots/:${bootId}`)
+    axios.put(`/api/collected-boots/cc/${bootId}`)
       .then(res => {
         console.log(res)
         this.setState({ collectedBoots: res.data })
@@ -91,11 +92,11 @@ class App extends Component {
 
 
     return (
-      <body className="App" >
+      <section className="App" >
         <Header />
         <main className='flexContainer'>
           <section className='bootAvailable'>
-            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} />
+            <BootsAvailable bootsAvailable={this.state.bootsAvailable} addBoot={this.addBoot} filterBoots={this.filterBoots} />
           </section>
           <section className='bootCollection'>
             <BootCollection collectedBoots={this.state.collectedBoots} deleteBoot={this.deleteBoot} addWear={this.addWear} addCC={this.addCC} />
@@ -105,7 +106,7 @@ class App extends Component {
         <footer>
           <p>Boot Collection Tracker by: Richard Miller Wimmer</p>
         </footer>
-      </body>
+      </section>
     );
   }
 }
