@@ -4,8 +4,11 @@ import React from "react";
 function Header(props) {
     return (
         <header>
-            <h1 className='header'>Heritage Boot Collection</h1>
-        </header>
+            <div className='header'>
+                <h1 >Boot Collection Tracker</h1>
+                <p className='headerTag'>Take care of your things and they will take care of you.</p>
+            </div>
+        </header >
     )
 };
 
