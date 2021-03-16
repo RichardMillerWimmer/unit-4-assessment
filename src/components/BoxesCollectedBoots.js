@@ -4,7 +4,7 @@ import React from "react";
 function BoxesCollectedBoots(props) {
     return (
 
-        <div className={props.themeDark ? 'themeDark' : ''} key={props.key} boot={props.boot} className='bootBoxCollection'>
+        <div className={props.themeDark ? 'themeDark bootBoxCollection' : 'bootBoxCollection'} boot={props.boot}>
             <button onClick={() => props.clickOnDelete(props.boot.id)} className='deleteBtn'>X</button>
             <div className='wearsContainer'>
                 <button onClick={() => props.clickOnWears(props.boot.id)} className='incBtn1'>+</button>

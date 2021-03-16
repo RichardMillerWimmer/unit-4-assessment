@@ -63,9 +63,9 @@ class BootCollection extends Component {
 
 
         // console.log(this.props.collectedBoots)
-        const mappedBoots = this.props.collectedBoots.map((elem, i) => (
+        const mappedBoots = this.props.collectedBoots.map((elem) => (
             <BoxesCollectedBoots
-                key={i}
+                key={elem.id}
                 boot={elem}
                 clickOnDelete={this.clickOnDelete}
                 clickOnWears={this.clickOnWears}

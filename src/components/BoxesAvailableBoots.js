@@ -4,7 +4,7 @@ import React from "react";
 function BoxesAvailableBoots(props) {
 
     return (
-        <div key={props.key} boot={props.boot} className='bootBox' onClick={() => {
+        <div boot={props.boot} className='bootBox' onClick={() => {
             props.clickOnBoot(props.boot)
         }}>
             <div className='bootInfo'>

@@ -31,9 +31,9 @@ class BootsAvailable extends Component {
 
     render() {
         // console.log(this.state.availableBootArray)
-        const mappedBoots = this.props.bootsAvailable.map((elem, i) => (
+        const mappedBoots = this.props.bootsAvailable.map((elem) => (
             <BoxesAvailableBoots
-                key={i}
+                key={elem.id}
                 boot={elem}
                 clickOnBoot={this.clickOnBoot}
             />
