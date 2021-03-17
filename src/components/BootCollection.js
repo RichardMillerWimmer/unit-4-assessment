@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
-
-// import BoxesCollected2 from './BoxesCollected2'
 
 import BoxesCollectedBoots from './BoxesCollectedBoots'
 
@@ -53,14 +50,12 @@ class BootCollection extends Component {
     render() {
         // console.log(this.state.collectedBoots)
 
-
         let bootCheck = this.props.collectedBoots
         let noBoots = () => {
             if (bootCheck.length === 0) {
                 return <p className='bootCheck'>add boots to<br></br>your collection</p>
             }
         }
-
 
         // console.log(this.props.collectedBoots)
         const mappedBoots = this.props.collectedBoots.map((elem) => (

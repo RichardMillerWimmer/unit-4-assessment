@@ -8,7 +8,7 @@ import Header from './components/Header';
 
 
 import './App.css';
-// import BoxesCollected2 from './components/BoxesCollected2';
+
 
 class App extends Component {
   constructor() {
@@ -38,32 +38,34 @@ class App extends Component {
       })
   }
 
+
+  // FILTER FUNCTIONS //
   filterBootModel(modelNumberSearch) {
-    console.log(modelNumberSearch)
+    // console.log(modelNumberSearch)
     axios.get(`/api/available-boots?model=${modelNumberSearch}`)
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.setState({ bootsAvailable: res.data })
       })
       .catch(error => console.log(error))
   }
 
   filterBootStyle(styleSearch) {
-    console.log(styleSearch)
+    // console.log(styleSearch)
     let styleSearchEncoded = encodeURIComponent(styleSearch)
     axios.get(`/api/available-boots?style=${styleSearchEncoded}`)
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.setState({ bootsAvailable: res.data })
       })
       .catch(error => console.log(error))
   }
 
   filterBootLeather(leatherSearch) {
-    console.log(leatherSearch)
+    // console.log(leatherSearch)
     axios.get(`/api/available-boots?leather=${leatherSearch}`)
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.setState({ bootsAvailable: res.data })
       })
       .catch(error => console.log(error))
@@ -83,8 +85,11 @@ class App extends Component {
         this.setState({ bootsAvailable: res.data })
         // console.log(this.state.bootsAvailable)
       })
+      .catch(error => console.log(error))
   }
 
+
+  // ADD BOOT TO COLLECTION //
   addBoot(newBoot) {
     // console.log(newBoot)
     axios.post('/api/collected-boots', { newBoot })
@@ -96,6 +101,8 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
+
+  // INCREMENTING WEARS AND CC //
   addWear(bootId) {
     // console.log(bootId)
     axios.put(`/api/collected-boots/wears/${bootId}`)
@@ -116,6 +123,7 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
+  // DELETING BOOT FROM COLLECTION //
   deleteBoot(removeBoot) {
     // console.log(removeBoot)
     axios.delete(`/api/collected-boots/${removeBoot}`)

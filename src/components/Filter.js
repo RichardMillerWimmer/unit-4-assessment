@@ -24,7 +24,6 @@ class Filter extends Component {
     }
 
     handleFilterModel = () => {
-        // console.log(this.state.modelNumberSearch)
         this.props.filterBootModel(this.state.modelNumberSearch)
         this.handleToggle()
     }

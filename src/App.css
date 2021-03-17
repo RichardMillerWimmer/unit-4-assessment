@@ -1,13 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap'); */
-/* Cormorant Garmond', serif */
+/* CSS Styling for Boot Tracker */
 
 * {
   box-sizing: border-box;
   font-family: 'Tahoma', sans-serif;
 }
 body {
-  
-  /* margin-top: -33px; */
   background-color: rgb(250, 250, 240);
 }
 
@@ -54,12 +51,10 @@ header {
 .header p{
   font-size: 1.2rem;
   margin-top: -27px;
-  /* line-height: 20; */
 }
 
 
-
-/* Side by Side flex */
+/* Side by Side Main Display */
 .flexContainer {
   display: flex;
   flex-flow: row nowrap;
@@ -67,16 +62,12 @@ header {
 .bootAvailable {
   width: 70vw;
   padding-top: 10px;
-  /* border: 1px black solid; */
 }
-
-
 .bootCollection {    
   width: 30vw;
   min-width: 250px;
   border-left: 2px black solid;
 }
-
 
 
 /* Availible Boot Display */
@@ -88,7 +79,6 @@ header {
   align-items: center;
 }
 
-
 .bootBox {
   width: 175px;
   height: 175px;
@@ -98,6 +88,7 @@ header {
   transition-duration: .5s;
   cursor: pointer;
 }
+
 .bootBox:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 60px 0 rgba(0,0,0,0.19);
   transform: scale(1.05);
@@ -128,10 +119,6 @@ header {
 }
 
 
-
-
-
-
 /* Collection Display  */
 .bootCheck {
   font-size: 1rem;
@@ -159,7 +146,6 @@ header {
   background-color: rgb(250, 250, 240);
 }
 
-
 .bootBoxContainerCollection {
   position: relative;
   height: 200vh;
@@ -181,7 +167,6 @@ header {
   height: 27px;
   border-top: black;
   border-left: black;
-
 }
 
 .bootBoxCollection {
@@ -192,7 +177,6 @@ header {
   box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
 }
 
-
 .bootBoxCollection .modelNumber {
   position: absolute; 
   z-index: 1;
@@ -202,9 +186,10 @@ header {
 .bootBoxCollection img{
   max-width: 100%;
   max-height: 100%;
-  /* object-fit: fill; */
 } 
 
+/* Collected Boot Controls */
+/* Delete Button */
 .deleteBtn {
   position: absolute;
   top: 10px;
@@ -223,6 +208,7 @@ header {
   background-color: rgb(148, 68, 68)
 }
 
+/* Wears */
 .wearsContainer {
   position: absolute;
   top: 57px;
@@ -248,6 +234,7 @@ padding-left: 5px;
 margin: 0;
 }
 
+/* Cleaning and Conditioning */
 .cleaningsContainer {
   position: absolute;
   top: 97px;
@@ -276,7 +263,6 @@ margin: 0;
 
 
 /* Filter */
-
 .filter {
   text-align: center;
   display: block;

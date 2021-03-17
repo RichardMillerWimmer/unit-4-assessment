@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 
 import Filter from './Filter'
 import BoxesAvailableBoots from './BoxesAvailableBoots'
 
-// import './App.css';
 
 class BootsAvailable extends Component {
     constructor() {
         super();
         this.state = {
-            // availableBootArray: [],
-            // collectedBoots: []
+
         }
         this.clickOnBoot = this.clickOnBoot.bind(this)
     }

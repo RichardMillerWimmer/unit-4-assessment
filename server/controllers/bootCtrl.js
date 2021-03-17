@@ -10,7 +10,6 @@ module.exports = {
         console.log(req.query)
         let filteredBoots = []
         const { model, style, leather } = req.query
-        // let encoded = encodeURIComponent(leather)
 
         if (model) {
             let filteredBoots = boots.filter(boots => boots.model === +model)
