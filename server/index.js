@@ -1,6 +1,9 @@
-const express = require('express');
+require("dotenv").config();
+const express = require("express");
+// const massive = require("massive");
+// const session = require("express-session");
 
-const bootCtrl = require('./controllers/bootCtrl');
+const bootCtrl = require("./controllers/bootCtrl");
 
 const app = express();
 const port = 5050;
@@ -9,14 +12,15 @@ const port = 5050;
 
 app.use(express.json());
 
-// contorller enpoints
-app.get('/api/available-boots', bootCtrl.getAvailibleBoots);
+// user endpoints
+app.get("/api/user");
+app.post("/api/user");
 
-app.post('/api/collected-boots', bootCtrl.postBootToCollection);
-app.put('/api/collected-boots/cc/:id', bootCtrl.addCleanCondition);
-app.put('/api/collected-boots/wears/:id', bootCtrl.addWear);
-app.delete('/api/collected-boots/:id', bootCtrl.deleteBoots);
-
-
+// boot endpoints
+app.get("/api/boot", bootCtrl.getAvailibleBoots);
+app.post("/api/boot", bootCtrl.postBootToCollection);
+app.put("/api/boot/cc/:id", bootCtrl.addCleanCondition);
+app.put("/api/boot/wears/:id", bootCtrl.addWear);
+app.delete("/api/boot/:id", bootCtrl.deleteBoots);
 
 app.listen(port, () => console.log(`server is running on ${port}`));
